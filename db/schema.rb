@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20150709175556) do
     t.text     "tool_consumer_profile_json"
     t.text     "tool_profile_json"
     t.text     "tool_proxy_json"
+    t.text     "tool_proxy_guid"
     t.text     "proposed_tool_proxy_json"
     t.text     "tool_proxy_response"
     t.datetime "created_at",                                null: false
@@ -81,6 +82,7 @@ ActiveRecord::Schema.define(version: 20150709175556) do
 
   create_table "sessions", force: true do |t|
     t.string   "session_id", null: false
+    t.integer  "tenant_id"
     t.text     "data"
     t.datetime "created_at"
     t.datetime "updated_at"

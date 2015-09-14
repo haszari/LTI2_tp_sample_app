@@ -5,7 +5,7 @@ include MessageSupport
 include OAuth::OAuthProxy
 
 class ApplicationController < ActionController::Base
-  protect_from_forgery
+  #protect_from_forgery
 
   def pre_process_tenant
     oauth_params = OAuth::OAuthProxy::OAuthRequest.parse_authorization_header request.authorization
